@@ -11,6 +11,10 @@
     justify-content: center;
     align-items: center;
     
+    @include mappy-bp(wide){
+        width: 60%;
+    }
+    
     
     form.addTask {
         display: flex;

@@ -23,9 +23,7 @@
                         <button type="submit" class="addTaskButton">+</button>
                      </form>
               
-               <ul v-show="list.length">
-               
-                          
+               <ul v-show="list.length">      
                     <div class="clearCompleted" @click="clearCompleted"><span class="taskTitle">Clear Completed</span></div>
                    <li :class="{ 'completed' : task.completed }"
                        v-for="task in list"
