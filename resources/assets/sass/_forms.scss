@@ -1,0 +1,109 @@
+/////////////////////   FORMS  /////////////////
+
+
+.formWrapper {
+    display: block;
+    height: auto;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    
+}
+
+.formGroup {
+    .formRow {
+        .formItem {
+            @include span(12);
+            &:last-of-type{ @include span(12 last); }
+            
+            @include mappy-bp(med){
+                @include span(6);
+                &:last-of-type{ @include span(6 last); }
+            }
+            
+        }
+        
+    }
+}
+
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"]
+{
+    background: $fourthColor;
+    line-height: normal;
+    border: none;
+    cursor: pointer;
+    overflow: visible;
+    -webkit-appearance: button; /* for input */
+    -webkit-user-select: none; /* for button */
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+
+
+
+.formGroupButton {
+        background: $loginButtonBg;
+        color: $loginButtonColor;
+        text-align: center;
+        font-family: $font1;
+        font-size: 2.5em;
+        line-height: 2em;
+        text-transform: uppercase;
+        padding: 0.5em 1em;
+        margin: 0.5em 0;
+        cursor: pointer;
+        border: none;
+    
+        &:hover {
+            background: $loginButtonHoverBg;
+            color: $loginButtonHoverColor;
+        }
+}
+
+.submitButton {
+        border-radius: 8px;
+}
+
+label, .forgotPassword {
+    font-family: $font2;
+    text-align: center;
+    font-size: 1.5em;
+    color: $primaryColor;
+    text-transform: uppercase;
+    line-height: 1.5em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    text-align: center;
+    font-family: $font2;
+    width: 75%;
+    background: white;
+    padding: 0.5em;
+    margin: 0 0 0.4em 0;
+    border: none;
+    font-size: 2em;
+    border-radius: 8px;
+}
+
+.formGroup {
+    .formItem {
+        input.inputError {
+            background: red;
+        }
+    }
+}
+

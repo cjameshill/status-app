@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/Chris/Dropbox/WEB/PROJECTS/vue/website/gulpfile.js",
+        "/Users/Chris/Dropbox/WEB/PROJECTS/vue/website/vendor/phpunit/php-code-coverage/src/CodeCoverage/Report/HTML/Renderer/Template/js/respond.min.js"
+    ]
+}

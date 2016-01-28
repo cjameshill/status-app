@@ -1,0 +1,148 @@
+/* STYLES
+========================================================================== */
+
+
+.tasksBox {
+    display: flex;
+    width: 80%;
+    margin: 3em auto;
+    min-height: 100vh;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+    form.addTask {
+        display: flex;
+        width: 100%;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input.inputTask {
+        border: 1px solid grey;
+        border-radius: 10px;
+        font-family: Lato, sans-serif;
+        font-size: 2.7em;
+        padding: 0.3em;
+        margin: 0.3em auto;
+        
+    }
+    
+    button.addTaskButton {
+        border-radius: 50%;
+        font-family: Lato, sans-serif;
+        font-size: 4em;
+        padding: 0.2em 0.5em;
+        margin: 0.3em;
+        
+        &:hover {
+            background: orange;
+        }
+    }
+    
+    
+    h1, h2 {
+        color: darkgray;
+        font-family: Lato, sans-serif;
+    }
+    
+    h1 {
+        font-size: 5em;
+    }
+    
+    h2 {
+        font-size: 4em;
+    }
+
+    ul {
+        width: 100%;
+    }
+
+    li {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        flex: 1 0 100%;
+        width: 100%;
+        margin: 0.5em 0;
+        padding: 0 0.5em;
+        background: rgb(149, 255, 149);
+        cursor: pointer;
+
+    }
+    
+    .taskTitle {
+        display: flex;
+        flex: 1 0 auto;
+        width: 85%;
+        font-family: Lato, sans-serif;
+        font-size: 2.7em;
+        padding: 1em;
+        margin: 0.3em auto;
+    }
+    
+    .clearCompleted {
+        display: flex;
+        margin-top: 1em;
+        justify-content: center;
+        flex-flow: row nowrap;
+        background: grey;
+        cursor: pointer;
+        
+        &:hover {
+            background: lightgrey;
+        }
+        
+        .taskTitle {
+            text-align: right;
+            color: white;
+            font-size: 1.5em;
+        }
+    }
+    
+    
+    .close {
+        display: flex;
+        flex: 0 1 auto;
+        justify-content: center;
+        align-items: center;
+        font-family: Lato, sans-serif;
+        font-size: 4em;
+        background: none;
+        border-radius: 50%;
+        padding: 0.3em 0.7em;
+        
+        &:hover {
+            background: white;
+        }
+    }
+    
+    
+    
+
+    li:hover {
+        background: orange;
+    }
+
+    .completed {
+        p {
+            text-decoration: line-through;
+        }
+    
+        background: lightgrey;
+    }
+    
+    .isCompleted {
+        position: relative;
+        top: -0.3em;
+        left: -0.3em;
+        font-size: 0.5em;
+        color: white;
+        
+    }
+    
+}
+            

@@ -1,0 +1,161 @@
+/* BASE
+========================================================================== */
+html { font-size: $base-font-size;
+    @include mappy-bp(large) {
+          font-size: 11px;
+        }
+    
+  box-sizing: border-box;
+
+    *, *:before, *:after {
+  box-sizing: inherit
+
+    }
+}
+
+#contentWrapper, footer, header, section, .content, .bg, nav { /* Clearfix */
+    @include clearfix;
+}
+#contentWrapper, footer, header, section, .content, nav, svg, .dogTagsBar, .dogTagsBoard { /* Display Block */
+    display: block;
+}
+
+.more, .flexContainer, .flexItem, .loginBar, .topBar, .topBar div, li, .logo img, .articleImgHover, .off-canvas, .more, .dogTagsBar, .dogTagsBoard, .transition { /* Transition */
+    @include transition($transition);
+}
+
+#contentWrapper {
+    margin-bottom: 100vh;
+    
+}
+
+section, footer, .topBar, .copyright, .content, .sectionHeader, .footerHeader, .alertBar, .loginBar, .logoutButton, .loginButton, .more, .dogTagsBar {
+    width: 100%;
+    height: auto;
+}
+
+section, footer, .bg, .alertBar, .loginBar, .off-canvas-wrapper, .dogTagsBar {
+    overflow: hidden; /* Overflow Hidden */
+}
+
+section { /* Position Relative */
+    position: relative;
+}
+
+.bg, .logoutButton, .loginButton, .copyright, .off-canvas, .more { /* Position Absolute */
+    position: absolute;
+}
+
+.topBar, .alertBar, .loginBar, footer, .off-canvas-wrapper, .dogTagsBar, .dogTagsBoard  { /* Position Fixed */
+    position: fixed;
+}
+
+.topBar, .off-canvas-wrapper, .dogTagsBoard { /* Position Top Left */
+    top: 0;
+    left: 0;
+}
+
+svg, body, footer, .content, .bg, footer, ul, .topBar, .logoutButton, .loginButton, .off-canvas-wrapper, .off-canvas { /* Margin 0 Padding 0 */
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 0;
+    padding: 0 0 8rem 0;
+}
+
+
+.more, .buttons, button, .dogTagsBar {
+     cursor: pointer;
+}
+
+
+
+/* BASE ELEMENTS
+========================================================================== */
+
+.bg {
+    height: 200%;
+    width: 100%;
+    top: -50%;
+    left: 0;
+    z-index: -9;
+ 
+}
+
+section {
+    z-index: index($elements, section);
+    background: $light;
+    
+}
+
+section.has_bg, .articleImgHold.has_bg, .row.has_bg {
+    position: relative;
+    
+    .sectionHeader h1, .sectionHeader h2, .sectionHeader h3 {
+        color: $primaryColor;
+    }
+    
+    &::after{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background: $gradientGrey;
+        z-index: -5;
+       
+    
+    }
+    
+   
+}
+
+section.no_bg, .row.no_bg {
+    .sectionHeader h1, .sectionHeader h2, .sectionHeader h3 {
+        color: $thirdColor;
+    }
+}
+
+section.first {
+    .content {
+        margin-top: 13rem;
+    }
+}
+
+footer {
+    z-index: index($elements, footer);
+    .content {
+        z-index: index($sectionElements, contents);
+    } 
+
+}
+
+
+header {
+    text-align: center;
+    text-transform: uppercase;
+    @include margin(0, 0);
+}
+
+.logo {
+    width: auto;
+}
+
+img { 
+    @include margin(0, 0);
+    height: 100%;
+    width: auto;
+}
+
+.copyright {
+    bottom: 0;
+    line-height: 2em;
+    font-family: $font1;
+    font-size: 1.5em;
+    color: $thirdColor;
+    text-align: center;
+    text-transform: uppercase;
+}
+

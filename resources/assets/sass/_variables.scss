@@ -1,0 +1,250 @@
+/* VARIABLES
+========================================================================== */
+
+$white: #fff;
+$light: #e8e8e8;
+$grey: #6a6a6a;
+$dark: #151515;
+$orange: #ff7600;
+$yellow: #ffd800;
+$blue: #00baff;
+$purple: #3b006c;
+$brown: #1f1600;
+$black: #000;
+$red: hsl(0, 100%, 45%);
+$green: #2ca300;
+
+$primaryColor: $white;
+$secondaryColor: $dark;
+$thirdColor: $grey;
+$fourthColor: $orange;
+
+$gradientBlack: rgba(0, 0, 0, 0.8);
+$gradientGrey: rgba(0, 0, 0, 0.5);
+
+$gradientWhite: $white;
+$gradientLight: #e8e8e8;
+
+$transparentWhite: rgba(255, 255, 255, 0.9);
+
+    $primaryGradientTop: $gradientBlack;
+    $primaryGradientBottom: $gradientGrey;
+
+    $secondaryGradientTop: $gradientWhite;
+    $secondaryGradientBottom: $gradientLight;  
+
+    $thirdGradientTop: $orange;
+    $thirdGradientBottom: $orange; 
+
+
+$userButtonBg: $orange;
+$userButtonHover: $dark;
+
+$alertBarErrorBg: $red;
+$alertBarSuccessBg: $primaryColor;
+
+$loginBarBg: $light;
+
+$loginButtonBg: $orange;
+$loginButtonColor: $light;
+
+$loginButtonHoverBg: $dark;
+$loginButtonHoverColor: $light;
+
+$font1: 'Passion One', helvetica, sans-serif;
+$font2: 'Lato', helvetica, sans-serif;
+$font3: helvetica, sans-serif;
+
+$navButtonColor: $primaryColor;
+$navButtonFont: $font2;
+$navButtonWeight: 700;
+$navButtonTransform: uppercase;
+$navButtonbgColor: $orange;
+$navButtonLetterSpacing: 0.1em;
+$navButtonFontSize: 16px;
+$navButtonHoverColor: $orange;
+
+$offCanvasNavHoverColor: $black;
+$offCanvasNavColor: $grey;
+$offCanvasNavSize: 1.9em;
+
+
+$moreHeight: 4rem;
+$moreBgColor: $grey;
+
+
+$sectionH: 650px;
+
+$loginBarH: 37rem;
+
+$topBarH: 10rem;
+$topBarBg: $primaryColor;
+
+$off-canvas-width: 75vw;
+$transition: all 200ms ease-in-out;
+$animationDelay: 200ms;
+
+
+$articleHeaderSize: 1.8em;
+$articleDateSize: 1.8em;
+$articleSnippetSize: 1.5em;
+$articleTagSize: $articleDateSize;
+
+
+
+@mixin linearGradient($top, $bottom){
+    background: $top;
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); 
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+}
+
+
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin size($width, $height: $width) {
+      width: $width;
+      height: $height;
+}
+
+@mixin margin($margin, $padding) {
+      margin: $margin;
+      padding: $padding;
+}
+
+
+
+
+/* FONTS
+========================================================================== */
+
+@include selection {
+  background-color: $orange;
+}
+
+$aColor: $primaryColor;
+$aHover: $fourthColor;
+
+
+$bold: 800;
+$light: 100;
+
+$hSpacing: -0.02em;
+
+$fontMargin: 0.3em;
+$fontPadding: 0.3em;
+
+p { 
+    margin-bottom: $fontMargin/2;
+    padding: $fontPadding/2;
+    font-family: $font2;
+    font-weight: 400;
+    font-size: 1.8em;
+    line-height: 1.5em;
+    letter-spacing: -0.04em;
+}
+
+h1, h2, h3, h4, h5 {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.9em;
+    font-family: $font2;
+    font-weight: 400;
+    margin: $fontMargin;
+    padding: $fontPadding;
+    color: $primaryColor;
+}
+
+h1 {font-size: 6em; letter-spacing: $hSpacing;}
+
+h2 {font-size: 4.236em; letter-spacing: $hSpacing;}
+
+h3 {font-size: 2.618em; letter-spacing: $hSpacing;}
+
+h4 {font-size: 1.618em;}
+
+h5 {font-size: 1.3em; }
+
+small, .font_small {font-size: 0.7em;}
+
+strong { font-weight: $bold; }
+
+.hr {
+    display: block;
+    height: 1px;
+    background: hsl(0, 0%, 80%);
+    width: 80%;
+    margin: 3em auto;
+}
+
+a {
+    &:active {text-decoration: none; color: $aColor;}
+    &:visited {text-decoration: none; color: $aColor;}
+    &:hover {text-decoration: none; color: $aHover;}
+    &:link {text-decoration: none; color: $aColor;}
+}
+
+
+$base-font-size: 9px; 
+
+
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight {
+    background: $fourthColor;
+    border-radius: 50%;
+    padding: 0.3em 0.6em;
+    margin: 0 0.3em;
+}
+
+
+
+/* GRID
+========================================================================== */
+
+$susy: (
+  columns: 12,
+  gutter-position: after,
+  gutters: .25,
+  global-box-sizing: border-box,
+);
+
+$susyFull: (
+  columns: 12,
+  gutter-position: after,
+  gutters: 0,
+  global-box-sizing: border-box,
+);
+
+@include border-box-sizing;
+
+$breakpoints: (
+  'small'     : 320px,
+  'med'       : 640px,
+  'large'     : 920px,
+  'wide'      : 1200px,
+  'mega'      : 1400px,
+  );
+
+
+/* Z-INDEX
+========================================================================== */
+
+$elements: footer, section, dogTagsBar, loginBar, topBar, main, dashboardHeader, newsletterNav, off-canvas, modals, dogTagsBoard, alertBar;
+
+$sectionElements: bg, contents;
+

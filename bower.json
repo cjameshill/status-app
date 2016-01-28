@@ -1,0 +1,18 @@
+{
+  "name": "The Browns Extranet",
+  "version": "0.0.1",
+  "homepage": "https://github.com/cjameshill/thebrowns-partnerships",
+  "authors": [
+    "Chris Hill <hello@christopherjameshill.com>"
+  ],
+  "description": "The Cleveland Browns Extranet",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "susy": "~2.2.6",
+    "mappy-breakpoints": "~0.2.1"
+  }
+}
