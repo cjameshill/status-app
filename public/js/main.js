@@ -27,6 +27,8 @@ Vue.component('app-tasks', {
         clearCompleted: function(task){
             this.list = this.list.filter(this.inProgress);
         }
+        
+        
     }
     
 });
@@ -37,6 +39,7 @@ new Vue({
 
         data: {
             tasks: [
+                { body: 'Go to the store', completed: false },
                 { body: 'Go to the store', completed: false },
                 { body: 'Go to the doctor', completed: false },
                 { body: 'Go to the store', completed: false },
