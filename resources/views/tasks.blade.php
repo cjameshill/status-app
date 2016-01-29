@@ -2,15 +2,15 @@
 <html>
     <head>
         <title>Laravel</title>
-
-        <link href="https://fonts.googleapis.com/css?family=Lato:100|Lato:400|Lato:800" rel="stylesheet" type="text/css">
+        	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Lato:200|Lato:400|Lato:800" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
         <div id="app">
          <div class="tasksBox">
                          
-                          <app-tasks :list="tasks"></app-tasks>
+                          <app-tasks :list="tasks" @new-task="handelNewTask"></app-tasks>
                 </div>
         </div>
              
@@ -18,10 +18,9 @@
                <h1>Status 
                     <span class="highlight isCompleted" v-show="remaining">@{{remaining}}</span>
                 </h1>
-                   <form class="addTask">
-                        <input class="inputTask" id="newTask" name="newTask" type="text" width="100%">
-                        <button type="submit" class="addTaskButton">+</button>
-                     </form>
+                        <input class="inputTask" id="newTask" name="newTask" type="text" width="100%" v-model="task" @keyup.enter="addTask">
+<!--                        <button type="submit" class="addTaskButton">+</button>-->
+                   
               
                <ul v-show="list.length">      
                     <div class="clearCompleted" @click="clearCompleted"><span class="taskTitle">Clear Completed</span></div>
@@ -41,6 +40,6 @@
         
         
                 <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.js"></script>
-                <script src="js/main.js"></script>
+                <script src="js/tasks.js"></script>
     </body>
 </html>

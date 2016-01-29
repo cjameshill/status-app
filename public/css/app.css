@@ -302,7 +302,7 @@ img {
     width: 100%;
     margin: 0.5em 0;
     padding: 0 0.5em;
-    background: #95ff95;
+    background: #b7fcff;
     cursor: pointer; }
   .tasksBox .taskTitle {
     display: -webkit-flex;
@@ -313,10 +313,11 @@ img {
     flex: 1 0 auto;
     width: 85%;
     font-family: Lato, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 2.7em;
     padding: 1em;
-    margin: 0.3em auto; }
+    margin: 0.3em auto;
+    color: darkslategray; }
   .tasksBox .clearCompleted {
     display: -webkit-flex;
     display: -ms-flexbox;

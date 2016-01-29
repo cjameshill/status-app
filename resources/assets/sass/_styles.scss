@@ -74,7 +74,7 @@
         width: 100%;
         margin: 0.5em 0;
         padding: 0 0.5em;
-        background: rgb(149, 255, 149);
+        background: rgb(183, 252, 255);
         cursor: pointer;
 
     }
@@ -84,10 +84,11 @@
         flex: 1 0 auto;
         width: 85%;
         font-family: Lato, sans-serif;
-        font-weight: 400;
+        font-weight: 300;
         font-size: 2.7em;
         padding: 1em;
         margin: 0.3em auto;
+        color: darkslategray;
     }
     
     .clearCompleted {
@@ -137,7 +138,6 @@
         p {
             text-decoration: line-through;
         }
-    
         background: lightgrey;
     }
     
