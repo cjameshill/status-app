@@ -1,8 +1,26 @@
 Vue.component('app-tasks', {
     
-    props: ['list'],
+    props: {
+        list: Array,
+        filterKey: String
+    },
     
     template: '#tasks-template',
+    
+    
+    
+     data: function() {
+        return { task: '' };
+    },
+    
+    created: function() {
+        
+        $.getJSON('api/tasks', function(tasks){
+            this.list = tasks;
+    
+        }.bind(this));
+    
+    },
     
     computed: {
         remaining: function(){
@@ -35,11 +53,9 @@ Vue.component('app-tasks', {
         }
         
         
-    },
-    
-    data: function() {
-        return { task: '' };
     }
+    
+   
     
 });
 
@@ -48,6 +64,7 @@ new Vue({
         el: '#app',
     
         data: {
+            searchQuery: '',
             tasks: []
         },
     

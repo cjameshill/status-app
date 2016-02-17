@@ -11,9 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('tasks');
-});
+
+Route::get('api/tasks', [
+    'uses' => 'TasksController@api'
+]);
+
+
+Route::get('/', [
+    'as' => 'Home', 'uses' => 'TasksController@index'
+]);
+
+Route::get('/tasks', [
+    'as' => 'tasks', 'uses' => 'TasksController@tasks'
+]);
 
 /*
 |--------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Laravel</title>
+        <title>What are you working on?</title>
         	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         <link href="https://fonts.googleapis.com/css?family=Lato:200|Lato:400|Lato:800" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/app.css">
@@ -9,37 +9,22 @@
     <body>
         <div id="app">
          <div class="tasksBox">
-                         
-                          <app-tasks :list="tasks" @new-task="handelNewTask"></app-tasks>
+                <input class="searchTask" id="searchTask" name="searchTask" type="text" width="100%" v-model="searchQuery">
+                  <app-task :filter-key="searchQuery"></app-task>
                 </div>
         </div>
              
              <template id="tasks-template">
-               <h1>Status 
-                    <span class="highlight isCompleted" v-show="remaining">@{{remaining}}</span>
-                </h1>
-                        <input class="inputTask" id="newTask" name="newTask" type="text" width="100%" v-model="task" @keyup.enter="addTask">
-<!--                        <button type="submit" class="addTaskButton">+</button>-->
-                   
-              
-               <ul v-show="list.length">      
-                    <div class="clearCompleted" @click="clearCompleted"><span class="taskTitle">Clear Completed</span></div>
-                   
-                        
-                      <li :class="{ 'completed' : task.completed }"
-                       v-for="task in list"
-                       @click="task.completed = ! task.completed"
-                    >
-                        <p class="taskTitle">@{{ task.body }}</p>
-                        <div class="close" @click="deleteTask(task)">X</div>
-                    </li>
-                </ul>
-                
-                <h2 v-else>No More Tasks</h2>
+               <h1>Test</h1>
+               
+               <ul>
+                   <li v-for="task in list | filterBy filterKey"><p class="taskTitle">@{{ task.title }} &nbsp; | by: @{{ task.owner }}</p></li>
+               </ul>
+               
              </template>
         
-        
+                <script src="http://code.jquery.com/jquery.js"></script>
                 <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.15/vue.js"></script>
-                <script src="js/tasks.js"></script>
+                <script src="js/test.js"></script>
     </body>
 </html>

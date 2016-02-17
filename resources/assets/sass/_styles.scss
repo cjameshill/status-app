@@ -8,7 +8,7 @@
     margin: 3em auto;
     min-height: 100vh;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     
     @include mappy-bp(wide){
@@ -24,7 +24,7 @@
         align-items: center;
     }
 
-    input.inputTask {
+    input.inputTask, input.searchTask {
         border: 1px solid grey;
         border-radius: 10px;
         font-family: Lato, sans-serif;
